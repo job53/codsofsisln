@@ -1,0 +1,22 @@
+#calcular en base a un valor dado por el usuario
+#su equivalencia en las diferentes divisas definidas
+
+#china
+yuan=2.81
+#japon
+yen=0.13
+#estados_unidos
+dolar=20.54
+#union_europea
+euro=21.29
+#reino_unido
+libras=25.57
+
+pesos=input("ingresa la cantidad de pesos a convertir")
+pesos=int(pesos)
+print("los pesos equivalen a ")
+print("tus pesos son %2f yuanes" %(pesos/yuan))
+print("tus pesos son %2f yenes" %(pesos/yen))
+print("tus pesos son %2f dolares" %(pesos/dolar))
+print("tus pesos son %2f euros" %(pesos/euro))
+print("tus pesos son %2f libras" %(pesos/libras))
