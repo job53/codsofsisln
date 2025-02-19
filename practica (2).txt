@@ -1,0 +1,26 @@
+lado = int(input("introduce la medidade los lados del cuadro"))
+print("el area del cuadradro es", lado**2)
+
+base = int(input("introduce la base"))
+altura = int(input("introduce la altura"))
+print("el area del rectangulo es", base*altura)
+
+base = int(input("introduce la base"))
+altura = int(input("introduce la altura"))
+print("base por altura es", base*altura/2)
+
+radio = int(input("introduce la medida de el radio"))
+pi = 3.14
+print("el area del circulo es", pi*radio**2)
+
+base = int(input("introduce la base"))
+altura = int(input("introduce la altura"))
+print("el area del romboide es", base*altura)
+
+lado = int(input("introduce la medida de el lado"))
+apotema = int(input("escribe la medida de el apotema"))
+print(" el area del pentagono es", (lado*5)*apotema)
+
+diametro_a = int(input("introduce la medida de el diametro_a"))
+diametro_b = int(input("introduce la medida de el diametro_b"))
+print("el area de el rombo es", .5*diametro_a*diametro_b)
