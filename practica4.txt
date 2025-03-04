@@ -2,3 +2,9 @@
 nombre = input("Cual es tu nombre")
 edad = input("Que edad tienes")
 profesion = input("Que deseas estudiar")
+
+int(input(print"mi nombre es nombre
+
+print("mi nombre es",nombre)
+print("tengo" ,edad )
+print("me gustaria ser" ,profesion)
