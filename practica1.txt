@@ -19,3 +19,12 @@ año_nac = 2009
 dia_hoy = 5
 mes_hoy = febrero
 año_actual = 2025
+
+dias_restantes_naci = 365-enero-febrero-dia_nac
+print(dias_restantes_naci)
+dias_transcurridos_actual = enero+dia_hoy
+print(dias_transcurridos_actual)
+dias_vividos = 365*(año_actual-año_nac-1)+dias_restantes_naci+dias_transcurridos_actual
+print(dias_vividos)
+print(dias_vividos//365)
+print(enero+febrero+dia_nac-dias_transcurridos_actual)
