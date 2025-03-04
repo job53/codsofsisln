@@ -1,0 +1,20 @@
+#zonas horarias
+#definir 5 ciudades del mundo y checar su diferente en la zona horaria
+#calcular la hora de las 5 ciudades 
+#base de la hora especifica por el usuario
+#cabe considerar que la hora sera representeda en un sistema de 12 horas 
+dublin = +6
+londres = +7
+tokio = +15
+los_angeles = -2
+nueva_york = +2
+nueva_deli = +11.3
+hora_mexico = input("ingresar el valor de la hora que qwuiera consultar")
+hora_mexico = int(hora_mexico)
+print("la hora en las siguentes ciudades sera:")
+print("DUBLIN ",hora_mexico +dublin)
+print("LONDRES",hora_mexico +londres)
+print("TOKIO",hora_mexico +tokio)
+print("LOS_ANGELES",hora_mexico+los_angeles)
+print("NUEVA-YORK",hora_mexico +nueva_york)
+print("NUEVA_DELI",hora_mexico +nueva_deli)
