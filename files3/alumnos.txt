@@ -1,0 +1,12 @@
+with open('alumnos.txt', 'r') as fichero:
+	for line in fichero.readlines():
+		print(line, end='')
+input("Como te llamas")
+input("cual es tu edad")
+input("ecribe tu fcha de nacimiento")
+ pepe
+355
+7887878
+Nombre :y
+Edad : 54
+Fecha de nacimiento : k9h7bghj
