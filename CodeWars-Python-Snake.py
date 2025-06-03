@@ -1,32 +1,15 @@
-def trim_canvas(canvas):
-    rows = [r for r in canvas if any(c != ' ' for c in r)]
-    if not rows:
-        return []
-    cols = list(zip(*rows))
-    cols = [c for c in cols if any(ch != ' ' for ch in c)]
-    return [list(r) for r in zip(*cols)]
+from itertools import accumulate
 
-
-def python_snake(body):
-    positions = []
-    x = y = 0
-    direction = 1
-    for i, length in enumerate(body):
-        if i:
-            y += 1
-        segment = [(x + j*direction, y) for j in range(length)]
-        positions.extend(segment)
-        x += (length - 1)*direction
-        direction *= -1
-    xs, ys = zip(*positions)
-    min_x, max_x = min(xs), max(xs)
-    min_y, max_y = min(ys), max(ys)
-
-    positions = [ (px - min_x, py - min_y) for px,py in positions ]
-    w, h = max_x - min_x + 1, max_y - min_y + 1
-    canvas = [[' ']*w for _ in range(h)]
-
-    for idx, (px, py) in enumerate(positions):
-        char = 'H' if idx==0 else ('T' if idx==len(positions)-1 else 'x')
-        canvas[py][px] = char
-    return canvas
+def python_snake(xs):
+    w = list(accumulate(x * (-1)**i for i, x in enumerate(xs)))
+    mi, ma = min(w), max(w)
+    n = mi < 0 and ma - mi or max(w[-1], ma)
+    H = start = max(0, -mi)
+    result = [list(' ' * n) for _ in xs]
+    for i, x in enumerate(xs):
+        end = start + x * (-1)**i
+        result[i][slice(*sorted([start, end]))] = 'x' * x
+        start = end
+    result[0][H] = 'H'
+    result[-1][end - (len(xs) & 1)] = 'T'
+    return result
